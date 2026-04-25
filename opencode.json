@@ -1,0 +1,44 @@
+{
+  "$schema": "https://opencode.ai/config.json",
+  "mcp": {
+    "chrome-devtools": {
+      "type": "local",
+      "command": [
+        "npx",
+        "-y",
+        "chrome-devtools-mcp@latest"
+      ]
+    },
+    "figma": {
+      "enabled": true,
+      "type": "local",
+      "command": [
+        "npx",
+        "-y",
+        "figma-developer-mcp@0.9.0",
+        "--env",
+        "C:\\Users\\gientech\\.config\\opencode\\.env.figma",
+        "--stdio"
+      ],
+      "timeout": 120000
+    }
+  },
+  "plugin": [
+    "typescript",
+    "superpowers@git+https://github.com/obra/superpowers.git"
+  ],
+  "instructions": [
+    "~/.config/opencode/rules/common.md",
+    "~/.config/opencode/rules/rules.md",
+    "~/.config/opencode/rules/ts-styles.md",
+    "~/.config/opencode/rules/css.md",
+    "~/.config/opencode/rules/component.md",
+    "~/.config/opencode/rules/interaction-guidelines.md",
+    "~/.config/opencode/workflow/debug.md"
+  ],
+  "formatter": {
+    "prettier": {
+      "disabled": true
+    }
+  }
+}
